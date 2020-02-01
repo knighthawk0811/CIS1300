@@ -1,0 +1,194 @@
+/*
+Theme Name:   version_1300
+Theme URI:    https://knighthawk0811.github.io/CIS1300/
+Description:  version_1300 is a custom theme for my 2020 CIS1300 class
+Author:       Joseph Neathawk
+Author URI:   https://knighthawk0811.github.io
+Version:      1.0.200131
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl.html
+Tags:         jpnp
+Text Domain:  version_1300
+*/
+
+
+
+/*--------------------------------------------------------------
+item {
+	layout(position)
+	
+	content(text)
+	
+	design(background)
+	
+	other(z-index)
+}
+----------------------------------------------------------------
+>>> COLORS:	  
+----------------------------------------------------------------
+	blue-dark:#003366;
+	green:#00cc66;	
+	red: #aa0000;
+	yellow: #DFE69E rgba(255,255,100,0.5);
+
+----------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Main Structur
+# General Elements
+# Modal Navigation
+# Navigation
+# Header Area
+# Content Area
+# Footer Area
+# Reusable Classes
+# Other
+# Templates
+# Media Queries
+
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Main Structure
+--------------------------------------------------------------*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/*the entire body of the html page*/
+body {
+	background: #eeeeee;
+}
+/* a wrapper around all the actual page content
+this will be centered on the page*/
+#wrapper {
+    margin: 10px auto;
+    position: relative;
+    width: 900px;
+    background: rgba(255,255,255,0.75);
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 2px rgba(0,0,0,0.25);
+}
+/*--------------------------------------------------------------
+# General Elements
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Modal Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Header Area
+--------------------------------------------------------------*/
+/*main header div*/
+#header {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    background-color: #529B46;
+}
+
+/*main link in the header*/
+#header a {
+
+
+}
+/* header title*/
+#header h1 {
+    display: inline;
+}
+/*--------------------------------------------------------------
+# Content Area
+--------------------------------------------------------------*/
+/*main content area, contains the "main" and "navbar"*/
+#content {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    padding: 1rem;
+    width: 100%
+}
+
+.article {
+	margin: 10px auto;
+	padding:1rem;
+	position: relative;
+	width: 100%;
+
+	background: rgba(255,255,255,0.75);
+}
+/*--------------------------------------------------------------
+# Footer Area
+--------------------------------------------------------------*/
+/*the footer of the page*/
+#footer {
+    margin: 0;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background: #529B46;
+}
+/*--------------------------------------------------------------
+# Reusable Classes
+--------------------------------------------------------------*/
+
+.color-special {
+    color: #529B46;
+}
+/*--------------------------------------------------------------
+# Other
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Templates
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+/* for-phone-only */
+@media only screen and (max-width: 599px) {
+	
+}
+
+/* for-tablet-portrait-up */
+@media only screen and (min-width: 600px) {
+	
+}
+
+/* for-tablet-portrait-only */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+	
+}
+
+/* for-tablet-landscape-up */
+@media only screen and (min-width: 900px) {
+	
+}
+
+/* for-tablet-landscape-only */
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+	
+}
+
+/* for-desktop-up */
+@media only screen and (min-width: 1200px) {
+	
+}
+
+/* for-desktop-only */
+@media only screen and (min-width: 1200px) and (max-width: 1799px) {
+	
+}
+
+/* for-big-desktop-up */
+@media only screen and (min-width: 1800px) {
+	
+}
