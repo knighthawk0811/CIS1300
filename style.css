@@ -67,7 +67,7 @@ body {
 /* a wrapper around all the actual page content
 this will be centered on the page*/
 #wrapper {
-    margin: 0 auto;
+    margin: 3px auto;
     position: relative;
     width: calc(100% - 10px);
     background: rgba(255,255,255,0.75);
@@ -81,10 +81,11 @@ this will be centered on the page*/
 # Modal Navigation
 --------------------------------------------------------------*/
 #button-main-menu {
+	height:2.5rem;
     position: fixed;
-    top: 1rem;
     right: 1rem;
-
+    top: 1rem;
+	width:3rem;
 }
 /*--------------------------------------------------------------
 # Navigation
@@ -179,6 +180,9 @@ this will be centered on the page*/
 @media only screen and (min-width: 900px) {
 	#wrapper {
 		max-width:900px;
+	}
+	#button-main-menu {
+		position:absolute;
 	}
 }
 
