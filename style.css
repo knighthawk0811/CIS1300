@@ -66,7 +66,7 @@ body {
 }
 /* a wrapper around all the actual page content
 this will be centered on the page*/
-#wrapper {
+#page {
     margin: 3px auto;
     position: relative;
     width: calc(100% - 10px);
@@ -180,7 +180,7 @@ this will be centered on the page*/
 
 /* for-tablet-landscape-up */
 @media only screen and (min-width: 900px) {
-	#wrapper {
+#page {
 		max-width:900px;
 	}
 	#button-main-menu {

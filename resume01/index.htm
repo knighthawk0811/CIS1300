@@ -5,48 +5,216 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Resume 01</title>
 
-	<style>
-	/* apply a natural box layout model to all elements, but allowing components to change */
-	html {
-	  box-sizing: border-box;
-	}
-	*, *:before, *:after {
-	  box-sizing: inherit;
-	}
-	/*the entire body of the html page*/
-	body {
-		background: #eeeeee;
-	}
-	/* a wrapper around all the actual page content
-	this will be centered on the page*/
-	.wrapper {
-		margin: 10px auto;
-		padding:1rem;
-		position: relative;
-		width: 1000px;
-
-		background: rgba(255,255,255,0.75);
-		border-radius: 25px;
-		box-shadow: 0px 0px 1px 2px #000000;
-	}
-	</style>
-
+	<!-- Material Icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- CIS1300 Style -->
+	<link href="/CIS1300/style.css" rel="stylesheet" type="text/css">
+	
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  	
 </head>
 <body class="">
-	<div class="wrapper">
-<p><a href="https://knighthawk0811.github.io/CIS1300/">HOME</a></p>
-		<h1>Resume 01 instructions</h1>
+<div id="page">
+	<div id="header">		
+		<!-- Button trigger modal -->
+		<button id="button-main-menu" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#main-menu">
+		  <i class="material-icons">menu</i>
+		</button>
 
-		<p>Check Blackboard.</p>
+		<!-- Modal -->
+		<div class="modal fade" id="main-menu" tabindex="-1" role="dialog" aria-labelledby="main-menu-label" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="main-menu-label">Main Menu</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<ul style="list-style: none inside none; padding:0;">
+							<li>
+							<a href="/CIS1300/">HOME</a>
+							</li>
+							<li>
+							<a href="https://github.com/knighthawk0811/CIS1300">GitHub Directory</a>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- end Modal -->
+		
+		<h1>Resume 01 </h1>
+		<br>
+		
+  	</div><!-- end header -->	
+	<div id="content">
 
-		<h2>To Submit: submit a link (via BB) to the base URL on your GitHub Pages repo</h2>
-	</div><!-- wrapper -->
+		<h2>Instructions</h2>
+		<p dir="ltr">Create a single webpage as your resume to include the following:</p>
+		<ul>
+		  <ul>
+		    <li dir="ltr">
+		      <p dir="ltr" role="presentation">Files</p>
+	        </li>
+		    <ul>
+		      <li dir="ltr">
+		        <p dir="ltr" role="presentation">resume-01 (folder)</p>
+	          </li>
+		      <ul>
+		        <ul>
+		          <li dir="ltr">
+		            <p dir="ltr" role="presentation">index.html</p>
+	              </li>
+		          <li dir="ltr">
+		            <p dir="ltr" role="presentation">style.css</p>
+	              </li>
+		          <li dir="ltr">
+		            <p dir="ltr" role="presentation">images (folder for your images)</p>
+	              </li>
+	            </ul>
+	          </ul>
+	        </ul>
+		    <li dir="ltr">
+		      <p dir="ltr" role="presentation">Layout Elements:</p>
+	        </li>
+		    <ul>
+		      <li dir="ltr">
+		        <p dir="ltr" role="presentation">HEAD tag with the proper meta tags inside</p>
+	          </li>
+		      <li dir="ltr">
+		        <p dir="ltr" role="presentation">BODY element</p>
+	          </li>
+		      <ul>
+		        <ul>
+		          <li dir="ltr">
+		            <p dir="ltr" role="presentation">background → light grey (may include a repeating image pattern)</p>
+	              </li>
+	            </ul>
+	          </ul>
+		      <li dir="ltr">
+		        <p dir="ltr" role="presentation">DIV tags for the layout</p>
+	          </li>
+		      <ul>
+		        <ul>
+		          <li dir="ltr">
+		            <p dir="ltr" role="presentation">#wrapper (contains #header, #content, #footer)</p>
+	              </li>
+		          <ul>
+		            <li dir="ltr">
+		              <p dir="ltr" role="presentation">background-color</p>
+	                </li>
+		            <li dir="ltr">
+		              <p dir="ltr" role="presentation">box-shadow</p>
+	                </li>
+		            <li dir="ltr">
+		              <p dir="ltr" role="presentation">border-radius</p>
+	                </li>
+	              </ul>
+		          <li dir="ltr">
+		            <p dir="ltr" role="presentation">#header</p>
+	              </li>
+		          <ul>
+		            <li dir="ltr">
+		              <p dir="ltr" role="presentation">your name and contact info</p>
+	                </li>
+		            <ul>
+		              <ul>
+		                <li dir="ltr">
+		                  <p dir="ltr" role="presentation">*I don&rsquo;t want your real phone number or address*</p>
+	                    </li>
+	                  </ul>
+	                </ul>
+		            <li dir="ltr">
+		              <p dir="ltr" role="presentation">include a Logo</p>
+	                </li>
+	              </ul>
+		          <li dir="ltr">
+		            <p dir="ltr" role="presentation">#content (contains #sidebar, #main)</p>
+	              </li>
+		          <li dir="ltr">
+		            <p dir="ltr" role="presentation">#sidebar</p>
+	              </li>
+		          <ul>
+		            <li dir="ltr">
+		              <p dir="ltr" role="presentation">bulleted skills list (6+)</p>
+	                </li>
+	              </ul>
+		          <li dir="ltr">
+		            <p dir="ltr" role="presentation">#main (contains many .article)</p>
+	              </li>
+		          <ul>
+		            <li dir="ltr">
+		              <p dir="ltr" role="presentation">.article</p>
+	                </li>
+		            <ul>
+		              <ul>
+		                <li dir="ltr">
+		                  <p dir="ltr" role="presentation">experience (3+)</p>
+	                    </li>
+		                <li dir="ltr">
+		                  <p dir="ltr" role="presentation">education (1+)</p>
+	                    </li>
+	                  </ul>
+	                </ul>
+	              </ul>
+		          <li dir="ltr">
+		            <p dir="ltr" role="presentation">#footer</p>
+	              </li>
+		          <ul>
+		            <li dir="ltr">
+		              <p dir="ltr" role="presentation">updated: January 2020</p>
+	                </li>
+	              </ul>
+	            </ul>
+	          </ul>
+	        </ul>
+		    <li dir="ltr">
+		      <p dir="ltr" role="presentation">Choose a single accent color to highlight your design</p>
+	        </li>
+		    <li dir="ltr">
+		      <p dir="ltr" role="presentation">use a class name to give this color to all the colored text</p>
+	        </li>
+		    <li dir="ltr">
+		      <p dir="ltr" role="presentation">Include a logo, make one up, or find it somewhere</p>
+	        </li>
+		    <li dir="ltr">
+		      <p dir="ltr" role="presentation">The Content can be made up and is not required to be accurate information</p>
+	        </li>
+		    <ul>
+		      <li dir="ltr">
+		        <p dir="ltr" role="presentation">ie: I don&rsquo;t want your actual home address and phone number</p>
+	          </li>
+	        </ul>
+		    <li dir="ltr">
+		      <p dir="ltr" role="presentation">The reason I use a resume is so you might have&nbsp; something useful when you finish the class.</p>
+	        </li>
+	      </ul>
+	  </ul>
+		<p>&nbsp;</p>
 
-	<div class="wrapper">
-
-		<h1>Example</h1>
-		<img src="image/example.png" />
-	</div><!-- wrapper -->
-
+		<p><strong>To Submit</strong>: Upload a link to the "LIVE assignment web page" on your 'GutHub pages' home page and submit a link to the home page via BlackBoard.</p>
+	
+	  <hr />
+		
+		<h2>Example</h2>
+	  <img src="image/example.png" title="Example Image" alt="Example Image" style="width:100%; height:auto;"/>
+	
+		
+  </div><!-- end content -->	
+	<div id="footer">
+		&copy;2020 JPNP
+	</div>		
+</div><!-- end page -->
 </body>
 </html>
