@@ -1,0 +1,34 @@
+/* 
+CIS
+Joseph Neathawk 2017
+rainbow table style 
+*/
+
+#row-1 {
+	background:#ff0000;
+}
+#row-2 {
+	background:#ef6b00;
+}
+#row-3 {
+	background:#FFD700;
+}
+#row-4 {
+	background:#008000;
+}
+#row-5 {
+	background:#00BFFF;
+}
+#row-6 {
+	background:#0000FF;
+}
+#row-7 {
+	background:#9400D3;
+}
+
+.align-left {
+	text-align:left;
+}
+.align-right {
+	text-align:right;
+}
