@@ -89,6 +89,34 @@ this will be centered on the page*/
 	
 	z-index:1030 ;/*bootstrap default*/
 }
+ul.menu {
+    list-style-position: inside;
+    list-style-image: none;
+    list-style-type: none;
+    position: relative;
+}
+ul.menu li {
+    position: relative;
+}
+
+ul.menu > li > ul {
+    display: none;
+}
+ul.menu > li:hover > ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #F9FF35;
+    list-style-position: inside;
+    list-style-image: none;
+    padding: 0 5px;
+    list-style-type: none;
+    z-index: 1000;
+}
+
+
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -153,6 +181,29 @@ this will be centered on the page*/
 .color-special {
     color: #529B46;
 }
+.polaroid {
+    padding: 1em;
+    background-color: #F1EEEA;
+    border-radius: 1rem;
+    max-width: 100%;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.50);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.50);
+    margin-bottom: 2em;
+}
+.polaroid > img {
+    width: 100%;
+    height: auto;
+    -webkit-box-shadow: inset 0px 0px 1px 1px rgba(171,145,112,0.50);
+    box-shadow: inset 0px 0px 1px 1px rgba(171,145,112,0.50);
+}
+.polaroid > p {
+    text-align: center;
+    font-family: 'Sriracha', cursive, sans-serif;
+    font-size: 2em;
+}
+
+
+
 /*--------------------------------------------------------------
 # Other
 --------------------------------------------------------------*/
