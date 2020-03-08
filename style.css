@@ -57,11 +57,14 @@ selector {
 html {
   box-sizing: border-box;
 }
+html.not-top { 
+	display:none;
+}
 *, *:before, *:after {
   box-sizing: inherit;
 }
 /*the entire body of the html page*/
-body {
+body {    
 	background: #eeeeee;
 }
 /* a wrapper around all the actual page content
@@ -75,6 +78,7 @@ this will be centered on the page*/
     border-radius: 5px;
     box-shadow: 0px 0px 1px 2px rgba(0,0,0,0.25);
 }
+
 /*--------------------------------------------------------------
 # General Elements
 --------------------------------------------------------------*/
@@ -90,49 +94,82 @@ this will be centered on the page*/
 	
 	z-index:1030 ;/*bootstrap default*/
 }
-ul.menu {
-    list-style-position: inside;
-    list-style-image: none;
-    list-style-type: none;
-    position: relative;
-}
-ul.menu li {
-    position: relative;
-}
-
-ul.menu > li > ul {
-    display: none;
-}
-ul.menu > li:hover > ul {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0px;
-    background-color: #F9FF35;
-    list-style-position: inside;
-    list-style-image: none;
-    padding: 0 5px;
-    list-style-type: none;
-    z-index: 1000;
-}
-
 
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+/* top menu */
+ul.menu {
+    display:inline-block;
+    position: relative;
+    
+    list-style-position: inside;
+    list-style-image: none;
+    list-style-type: none;
+}
+/* menu items */
+ul.menu li {
+    display: inline-block;
+    float:left;
+    padding:.5em 1em;
+    position: relative;
+    width:auto;
+}
+/* sub-menu 1  disabled */
+ul.menu > li > ul {
+    display: none;
+}
+/* sub-menu 1 active default */
+ul.menu > li:hover > ul {
+    display: block;
+    left: 0px;
+    padding: 0 5px;
+    position: absolute;
+    top: 100%;
+    
+    list-style-position: inside;
+    list-style-image: none;
+    list-style-type: none;
+    
+    background-color: #F9FF35;
+    
+    z-index: 1000;
+}
+/* sub-menu 1 active left side */
+.sidebar.left ul.menu > li:hover > ul {
+    display: block;
+    left:100%;
+    top: 0px;
+    right: unset;
+}
+/* sub-menu 1 active right side */
+.sidebar.right ul.menu > li:hover > ul {
+    display: block;
+    left:unset;
+    top: 0px;
+    right: 100%;
+}
+/* sub-menu 1 items */
+.sidebar.left ul.menu li,
+.sidebar.right ul.menu li {
+    display: block;
+    float:none;
+    width:100%;
+}
+
 /*--------------------------------------------------------------
 # Header Area
 --------------------------------------------------------------*/
 /*main header div*/
 #header {
     margin: 0;
+	min-height:5em;
     position: relative;
     width: 100%;
     padding: 1rem;
     background-color: #529B46;
 }
-
 
 /*main link in the header*/
 #header a {
@@ -148,11 +185,52 @@ ul.menu > li:hover > ul {
 --------------------------------------------------------------*/
 /*main content area, contains the "main" and "navbar"*/
 #content {
-    display: inline-block;
     margin: 0 auto;
     position: relative;
-    padding: 1rem;
+    padding: 0;
     width: 100%
+}
+
+    
+.sidebar {
+    background-color: #eeeeee;
+    position: relative;
+    padding:0;
+
+    border-bottom:1px solid #000000;
+}
+.sidebar.right,
+.sidebar.right.w-25 {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 75%;
+    right:0px;
+    
+    border:none;
+    border-left:1px solid #000000;
+}
+.sidebar.left,
+.sidebar.left.w-25 {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left:0px;
+    right: 75%;
+    
+    border:none;
+    border-right:1px solid #000000;
+}
+.main {
+    background-color: #ddeecc;
+    width: 100%;
+    padding: 1em;
+    min-height: 30em;
+    opacity: 1;
+    font-style: normal;
+}
+.main.w-75 {
+    margin-right: 25%;
 }
 
 .article {
@@ -168,6 +246,7 @@ ul.menu > li:hover > ul {
 --------------------------------------------------------------*/
 /*the footer of the page*/
 #footer {
+	height:3em;
     margin: 0;
     padding: 1rem;
     position: relative;
