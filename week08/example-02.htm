@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="ok-not-top" lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CIS 1300 | Example</title>
+
+    <!-- Material Icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">	
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet"> 
+	<!-- font awesome -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+	<!-- Bootstrap CSS -->
+	<!-- CIS1300 Style -->
+	<link href="/CIS1300/style.css" rel="stylesheet" type="text/css">
+	
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	
+	<script>
+	if(top.location == self.location)
+	{
+		jQuery( "html.not-top" ).removeClass( "not-top" )
+	}
+	</script>
+    <style>
+    
+        /* navigation */
+        
+        /* top menu */
+        ul.menu-02 {
+            display:inline-block;
+            position: relative;
+            width:100%;
+
+            list-style-position: inside;
+            list-style-image: none;
+            list-style-type: none;
+        }
+        /* menu items */
+        ul.menu-02 li {
+            display: block;
+            float:left;
+            padding: 0.5em 1em;
+            position: relative;
+            width:auto;
+        }
+        ul.menu-02 li:hover {
+            background:#33ff66;
+        }
+        /* sub-menu 1  disabled */
+        ul.menu-02 > li > ul {
+            display: none;
+        }
+        /* sub-menu 1 active */
+        ul.menu-02 > li:hover > ul {
+            display: block;
+            padding: 0;
+            position: absolute;
+            top: 100%;
+            left: 0px;
+            width:15em;
+
+            list-style-position: inside;
+            list-style-image: none;
+            list-style-type: none;
+
+            background-color: #F9FF35;
+
+            z-index: 1000;
+        }
+        /* sub-menu 1 active */
+        ul.menu-02 > li:hover > ul > li {
+            width:100%;
+        }
+
+        /* content area */     
+        .sidebar-02 {
+            position: relative;
+            width:100%;
+
+            border:none;
+            border-bottom:1px solid #000000;
+        }
+        .main-02 {
+            min-height: 30em;
+            padding: 1em;
+            width: 100%;
+
+            font-style: normal;
+
+            background-color: #ddeecc;
+
+            opacity: 1;
+        }
+    
+    </style>
+</head>
+<body class="">
+<div id="page">
+	<div id="header">		
+		<!-- Button trigger modal -->
+		<button id="button-main-menu" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#main-menu">
+		  <i class="material-icons">menu</i>
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="main-menu" tabindex="-1" role="dialog" aria-labelledby="main-menu-label" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="main-menu-label">Main Menu</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<ul style="list-style: none inside none; padding:0;">
+							<li>
+							<a href="/CIS1300/">HOME</a>
+							</li>
+						</ul>                        
+						<iframe src="/CIS1300/directory.htm" class="border" style="width:100%; height:calc(100vh - 20em);">
+						</iframe>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- end Modal -->
+		
+		<h1>CIS 1300</h1>
+		<h2>Week 08:</h2>
+		<br>
+		
+  	</div><!-- end header -->	
+	<div id="content">
+        <div class="sidebar-02">
+        <ul class="menu-02">
+            <li>one</li>
+            <li>two
+                <ul>
+                    <li>alpha</li>
+                    <li>bravo</li>
+                </ul>
+            </li>
+            <li>three</li>
+        </ul>
+        </div>
+
+        <div class="main-02">
+            <p>main content area
+                
+            </p>
+            <p>Example-02</p>
+        </div>      
+		
+	
+	</div><!-- end content -->	
+	<div id="footer">
+		&copy;2020 JPNP
+	</div>		
+	</div><!-- end page -->
+</body>
+</html>
