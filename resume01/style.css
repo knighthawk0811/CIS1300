@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+/* 2016 JPNP */
+
+
+/*
+item {
+	layout(position)
+	
+	content(text)
+	
+	design(background)
+	
+	other(z-index)
+}
+COLORS:	  
+	blue-dark:#003366;
+	green:#00cc66;	
+	red: #aa0000;
+	yellow: #DFE69E rgba(255,255,100,0.5);
+
+Table of Contents:
+1.Main Structure
+2.Elements
+3.Navigation
+4.Header Area
+5.Content Area
+6.Footer Area
+7.Other
+8.Media Queries
+
+*/
+
+/***************************
+1.Main Structure
+***************************/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/*the entire body of the html page*/
+body {
+	background: #eeeeee;
+}
+/* a wrapper around all the actual page content
+this will be centered on the page*/
+#wrapper {
+	margin: 10px auto;
+	position: relative;
+	width: 900px;
+	
+	background: rgba(255,255,255,0.75);
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
+	
+	overflow:hidden;
+}
+/***************************
+2.Elements
+***************************/
+/***************************
+3.Navigation
+***************************/
+/***************************
+4.Header Area
+***************************/
+/*main header div*/
+#header {
+	height: 200px;
+	margin: 0;
+	position: relative;
+	width: 100%;
+	padding-top: 0rem;
+	padding-right: 1rem;
+	padding-left: 0rem;
+	padding-bottom: 0rem;
+	background: #dddddd;
+}
+
+/*main link in the header*/
+#header a {
+	float:left;	
+	
+	line-height:0;
+}
+/* header title*/
+#header h1 {
+	display: inline;
+	float: right;
+	margin: 50px 0 0 20px;
+}
+/* header content*/
+#header p {
+	clear:right;
+	display:inline;
+	float:right;	
+	margin:50px 0 0 20px;
+}
+/***************************
+5.Content Area
+***************************/
+/*main content area, contains the "main" and "navbar"*/
+#content {
+	display:inline-block;
+	margin: 0 auto;
+	position: relative;
+	width: 100%
+}
+/* main area actually contains the page content*/
+#main {
+	margin:0 0 0 20%;
+	min-height:500px;
+	padding:10px;
+	position: relative;
+	width:80%;	
+	
+	background:rgba(255,255,255,0.5);
+	box-shadow: -1px 0px 1px 1px rgba(0,0,0,0.25);
+	
+	z-index:99;
+}
+/*the navigation bar / sidebar wrapper*/
+#sidebar {
+	bottom:0px;
+	left:0px;
+	position:absolute;
+	top:0px;	
+	width:20%;
+	
+	text-align:center;
+	
+	background:rgba(0,0,0,0.02);
+	
+	z-index:9999;
+}
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+}
+/* inside the 'main' area, this is an individual article*/
+.article {
+	
+}
+.color-special {
+	color: #aa0000;
+}
+/***************************
+6.Footer Area
+***************************/
+/*the footer of the page*/
+#footer {
+	margin:0;
+	min-height:100px;
+	padding:10px;
+	position:relative;
+	width:100%;
+	
+	text-align: center;
+	
+	background:#dddddd;	
+}
+/***************************
+7.Other
+***************************/
+/***************************
+8.Media Queries
+***************************/
