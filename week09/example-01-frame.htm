@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="ok-not-top" lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CIS 1300 | Example</title>
+
+    <style>
+         /* normal design stuff */
+    body {
+        margin: 0;
+        color: #ffffff;
+    }
+    .parallax-wrapper {
+        padding:0;
+        box-sizing: border-box;
+    }
+    .parallax-wrapper::before {
+        background-image: url("https://images4.alphacoders.com/878/8788.png");
+        background-position:center center;
+        background-size:cover;
+    }      
+    .parallax-wrapper.first::before {
+    background-image: url(https://www.linuxclever.com/wp-content/uploads/2016/09/debian_metal_wallpaper_hd_by_malkowitch-d49egyf-990x557.jpg);
+}
+    .parallax-wrapper.second::before {
+    background-image: url(https://img00.deviantart.net/93d2/i/2014/240/f/9/rainbow_paint_splatter_wallpaper_2_by_flightedbird-d7x2pyl.png);
+}
+    .parallax-wrapper.third::before {
+    background-image: url(https://images4.alphacoders.com/878/8788.png);
+}
+    .parallax-wrapper.fourth::before {
+    background-image: url(https://i.pinimg.com/originals/75/8b/1b/758b1bbdb15842d42d77df44dea93b78.jpg);
+}
+    .content {
+        margin: 0 auto;
+        padding:10em 2em;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* parallax design stuff */
+    
+    /* limitation: all the main visual elements (parallax, parallax::before, and the regular-wrapper) MUST be height:100vh or else you will get visible overlapping of the background images. IE: the background image from element 2 will overlap the bg from element 1 and you will see some bg2 in the space for bg1.
+    */
+    
+    /* the root element (html) need to have overflow:hidden when combined with other rules this will give the 3d effect */
+    html {
+        overflow: hidden;
+    }
+    /* perspective is the first 3d setting. It instructs the browser to display in 3d mode. 
+    Overflow in both x and y direction are vitally important. Without oferflow-x we will have issue with the scrollbar not displaying in the right place (off screen). Overflow-y CANNOT be hidden or we won't be able to scroll at all.
+    Finally, the height needs to be 100vh, that is 100% of the viewport height. This should be self explainitory.
+    */
+    body {
+        height: 100vh;
+        perspective: 1px;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }    
+    /* preserve-3d is what tells the browser to put the 3d elements in their exact righ tplaces.
+    Again, we need 100vh here as well
+    */
+    .parallax-wrapper {
+        width: 100vw;
+        height:100vh;
+        transform-style: preserve-3d;
+    }
+    /* this element need to be 100vh, however, because it also needs to be taken out of the flow (position:absolute) I have chosen to position all four sides to 0.
+    The content is required in all ::before and ::after pseudo-elements in order to force them to be displayed.
+    Z-index is used to force this element in the backgorund at all times.
+    Finally, the two transform rules will move in the z index back some distance, and then scale the image up in effort to bring it back up to normal size after we told it to be far away.
+    */
+    .parallax-wrapper::before {
+        top:0;
+        right:0px;
+        bottom:0px;
+        left:0;
+        position: absolute;
+        
+        content:"";
+        transform:translateZ(-1px) scale(2);
+        z-index: -100;
+    }   
+    /* This element is required also to be 100vh and have a position:relative. This also needs a background color to block out the scrolling bg images.
+    Last, this element needs some z-index higher than the ::before elements otherwise the bg elements may overlap the foreground.
+    */
+    .regular-wrapper {
+        height:100vh;
+        position: relative;
+        width: 100vw;
+        
+        background:rgba(100,100,100,1);
+        z-index:100;
+    }
+
+
+    
+    </style>
+</head>
+<body class="">
+        
+   <div class="regular-wrapper">
+     <div class="content">
+       <p>header</p>
+     </div>
+   </div> 
+   <div class="parallax-wrapper first"></div>
+   <div class="regular-wrapper">
+     <div class="content">
+       <p>content 01.</p>
+     </div>
+   </div> 
+   <div class="parallax-wrapper second"></div>
+   <div class="regular-wrapper">
+     <div class="content">
+       <p>content 02.</p>
+     </div>
+   </div> 
+   <div class="parallax-wrapper third"></div>
+   <div class="regular-wrapper">
+     <div class="content">
+       <p>content 03.</p>
+     </div>
+   </div> 
+   <div class="parallax-wrapper fourth"></div>
+   <div class="regular-wrapper">
+     <div class="content">
+       <p>footer.</p>
+     </div>
+   </div> 
+		
+</body>
+</html>
