@@ -2,160 +2,115 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Homework - 07</title>
+<title>Homework - 08</title>
 	
 	
 <style type="text/css">
-    body {
-        background-color: #120086;
-    }
-    .page {
-        margin: 3px auto 3px auto;
-        max-width:900px;
-        min-width:400px;
-        position: relative;
-        width: 80%;
-        background-color: #8C0369;
-    }
-    /* navigation */
-    /* menu*/
-    ul.menu,
-    ul.menu ul {
-        list-style: none inside none;
-        padding:0;
-        position:relative;;
-        margin:0;
-    }   
-    /* menu items */
-    ul.menu li {
-        padding:0.5em;
-        
-        background:#ffffff;
-        border:1px solid #000;
-    }
-    ul.menu li:hover {        
-        background:#4E79A0;
-        border:1px solid #333;
-    }
-    ul.menu li a  { 
-        display:block;
-        
-        color:#000;
-        text-decoration:none;
-        
-        border-bottom:1px solid rgba(0,0,0,0);
-    }
-    ul.menu li a:hover  {   
-        border-bottom:1px solid #33ff66;
-    }
-    /* sub-menu l1 */
-    ul.menu > li > ul {
-        display:none;
-        position:absolute;
-        right:100%;
-        top:0px;
-        min-width:15em;
-    } 
-    ul.menu > li:hover > ul {
-        display:block;
-        z-index:1000;
-    }
+  
+body {
+    text-align: center;
+}
+body * {
+  box-sizing:border-box;
+}
+p {
+  margin:5em auto;
+}
+.spinning img {
+  height:auto;
+  margin:0 auto;
+  width:300px;
+  
+  border-radius:1em;
+  
+    transition: all 500ms ease;
+}
+.spinning img:hover {  
+    filter: hue-rotate(150deg) saturate(150%);
+    transition: all 1000ms ease;
+    transform: rotate(1080deg) scale(2,2) skew(0deg,-10deg);
+  
+  border-radius:999px;
+}
 
-    .header {
-        background-color: #008CFF;
-        width: 100%;
-        height: 150px;
-    }
-    .header h1 {
-        text-align:center;
-        text-shadow:0 0 0 rgba(0,0,0,0);
-    }
-    .header h1:hover {
-        color:crimson;
-        text-shadow:-1px -1px 1px rgba(255,255,255,0.75), 1px 1px 1px rgba(0,0,0,1);
-    }
-    .header .logo {
-        box-sizing: border-box;
-        height: 106px;
-        left:1em;
-        padding:3px;
-        position:absolute;
-        top:1em;
-        width: 106px;
 
-        background-color: #333333;
-        border-radius:50%;
-        box-shadow:0 0 1px 1px rgba(255,255,255,0.5), inset 0 0 0 10px #000000;
 
-        overflow:hidden;
-    }
-    .header .logo:hover {	
-        box-shadow:0 0 1px 1px rgba(0,0,0,0.5), inset 0 0 0 10px #ffffff;
-    }
-    .content {
-        width: 100%;
-        background-color: #FBC300;
-        position: relative;
-    }
-    .sidebar {
-        background-color: #016B0D;
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
-        left: 70%;
-        right: 0px;
-        padding:0.5em 1em;
 
-        border-left:1px solid #000000;
-    }
-    .main {
-        background-color: #820000;
-        width: calc(70% - 2em);
-        margin-right: 30%;
-        padding: 1em;
-        min-height: 30em;
-        opacity: 1;
-        font-style: normal;
-    }
-    .footer {
-        background-color: #008CFF;
-        width: 100%;
-        height: 100px;
 
-        text-align:center;
-    }
+.star {
+  height:200px;
+  padding:5em;
+  width:100%;
+  
+  background:#F2F5A9;
+}
+.star img {
+  height:auto;
+  left:50%;
+  margin:0 0 0 -50px;
+  position:absolute;
+  width:100px;
+  
+  border-radius:1em;
+  
+    transition: all 500ms ease;
+}
+.star:hover img:nth-child(1) {  
+    filter: hue-rotate(150deg) saturate(150%);
+    transition: all 1000ms ease;
+    transform: rotate(0.2turn) translate(150px) rotate(-0.2turn);
+  
+  border-radius:999px;
+}
+.star:hover img:nth-child(2) {  
+    filter: hue-rotate(150deg) saturate(150%);
+    transition: all 1000ms ease;
+    transform: rotate(0.4turn) translate(150px) rotate(-0.4turn);
+  
+  border-radius:999px;
+}
+.star:hover img:nth-child(3) {  
+    filter: hue-rotate(150deg) saturate(150%);
+    transition: all 1000ms ease;
+    transform: rotate(0.6turn) translate(150px) rotate(-0.6turn);
+  
+  border-radius:999px;
+}
+.star:hover img:nth-child(4) {  
+    filter: hue-rotate(150deg) saturate(150%);
+    transition: all 1000ms ease;
+    transform: rotate(0.8turn) translate(150px) rotate(-0.8turn);
+  
+  border-radius:999px;
+}
+.star:hover img:nth-child(5) {  
+    filter: hue-rotate(150deg) saturate(150%);
+    transition: all 1000ms ease;
+    transform: rotate(0.0turn) translate(150px) rotate(-0.0turn);
+  
+  border-radius:999px;
+}
 </style>
 </head>
 
 <body>
-<div class="page">
-    <div class="header">
-        <h1>Homework 07 - NavBar</h1>
-        <a href="/CIS1300/" class="logo"><img src="/CIS1300/image/logo_code.png" width="100" height="100" alt=""/></a>
-    </div>
-<div class="content">
-    <div class="sidebar"> 
-        <ul class="menu">
-        <li><a href="#par-01">paragraph 01</a>
-            <ul>
-                <li><a href="#par-02">paragraph 02</a></li>
-                <li><a href="#par-03">paragraph 03</a></li>
-                <li><a href="#par-04">paragraph 04</a></li>
-            </ul></li>
-        <li><a href="#par-02">paragraph 02</a></li>
-        <li><a href="#par-03">paragraph 03</a></li>
-        <li><a href="#par-04">paragraph 04</a></li>
-        </ul>
-    </div>
-    <div class="main">
-        <p id="par-01"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum   tempus metus in tempor mattis. Integer tempus fermentum nisl, id   consectetur est tristique vitae. Maecenas ut tortor massa. Curabitur   ullamcorper, lorem sed blandit vulputate, ante magna luctus libero, in   ullamcorper orci ante sed nibh. Mauris scelerisque lorem et eleifend   pretium. Fusce sagittis orci quis tortor convallis, nec semper nulla   consectetur. Praesent ornare dui nec est finibus, non varius quam   sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit.   Nulla ex lectus, tristique sit amet libero vel, efficitur pellentesque   est. Aenean a varius ipsum, quis blandit lorem. Vivamus tempus lorem   augue, vel molestie felis sodales in. Curabitur sed egestas urna. Proin   feugiat molestie efficitur. Proin et sagittis neque. In eget turpis vel   velit scelerisque vulputate. </p>
-        <p id="par-02"> Morbi a hendrerit urna. Nullam hendrerit mattis ligula quis placerat. In   aliquet nisi in erat venenatis, quis maximus augue dictum. Quisque id   metus vel ante dignissim maximus at id est. Suspendisse congue rutrum   mi, sed mattis neque molestie ut. Fusce tincidunt velit sit amet   pharetra molestie. Nunc consectetur metus urna, porta venenatis sem   fermentum eu. Donec blandit sit amet nibh sagittis aliquet. In massa   odio, egestas id porttitor ac, lobortis non ex. </p>
-        <p id="par-03"> Phasellus rutrum accumsan mi, a sollicitudin diam tempor vitae. Etiam   sit amet ex enim. Maecenas eu arcu mollis, venenatis lacus et, viverra   ligula. Donec malesuada tortor orci, non lobortis tellus gravida a.   Integer consectetur porttitor neque pretium auctor. In vestibulum, quam a   porta hendrerit, metus nisi vestibulum purus, eu luctus mi justo sit   amet elit. Integer commodo semper leo, at rhoncus nisi. Nullam accumsan,   quam id luctus ultrices, est ex rutrum velit, sed tincidunt tellus erat   eu nibh. Vivamus commodo iaculis malesuada. Curabitur at pretium nibh.   Maecenas placerat neque ut odio laoreet, ut accumsan ex ultrices. </p>
-        <p id="par-04">Aliquam dictum malesuada sem, vitae gravida urna. Pellentesque nec orci   et nulla elementum finibus. Nam convallis tristique tortor non pulvinar.   In sagittis dui sit amet elit dapibus laoreet. Nam massa tortor, rutrum   quis sodales quis, gravida nec magna. Aenean id pulvinar libero, luctus   dapibus odio. Vivamus cursus, libero eget tristique pharetra, purus   neque ornare mi, ut pharetra diam neque id odio. Maecenas gravida quam   nulla, sit amet tincidunt ex molestie quis. Quisque suscipit tellus eget   faucibus mollis. Fusce porttitor nisi ultricies suscipit varius.   Aliquam in erat malesuada, congue lorem id, rutrum lorem. Nam sagittis   enim vitae erat semper congue. Phasellus viverra mauris quis neque   faucibus elementum. Praesent et nisi rhoncus, blandit magna eget, tempor   nisl. </p>
-    </div>
+    <p>
+Lorem Ipsum
+</p>
+<div class="spinning">
+<img src="https://imgur.com/gvGCSko.jpg" width="300" height="auto" alt=""/>
 </div>
-<div class="footer">&copy; 2020 JPNP</div>
-	
+<p>
+Lorem Ipsum
+</p>
+
+
+<div class="star">
+<img src="https://imgur.com/gvGCSko.jpg" width="300" height="auto" alt=""/>
+<img src="https://imgur.com/gvGCSko.jpg" width="300" height="auto" alt=""/>
+<img src="https://imgur.com/gvGCSko.jpg" width="300" height="auto" alt=""/>
+<img src="https://imgur.com/gvGCSko.jpg" width="300" height="auto" alt=""/>
+<img src="https://imgur.com/gvGCSko.jpg" width="300" height="auto" alt=""/>  
 </div>
 </body>
 </html>
