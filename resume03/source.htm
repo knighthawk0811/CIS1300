@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Joseph Neathawk - Super Awesome Guy</title>
+<style type="text/css">
+@charset "utf-8";
+/* CSS Document */
+/* 2020 JPNP */
+
+
+/*--------------------------------------------------------------
+selector {
+    layout(position)
+    
+    content(text)
+    
+    design(background)
+    
+    other(z-index)
+}
+----------------------------------------------------------------
+>>> COLORS:   
+----------------------------------------------------------------
+    blue-dark:#003366;
+    green:#00cc66;  
+    red: #aa0000;
+    yellow: #DFE69E rgba(255,255,100,0.5);
+
+----------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Main Structure
+# General Elements
+# Modal Navigation
+# Navigation
+# Header Area
+# Content Area
+# Footer Area
+# Reusable Classes
+# Other
+# Templates
+# Media Queries
+
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Main Structure
+--------------------------------------------------------------*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/*the entire body of the html page*/
+body {
+    margin:0;
+    padding:0;
+
+    font-size:max(16px, min(20px, calc(2rem - 1.5vw)));
+
+    background: #bbddff;
+}
+body::after {
+    position:fixed;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    
+    background: #eeeeee url(image/bg.png);
+    background-attachment:fixed;
+    
+    content: "";
+    opacity:0.6;
+    z-index:-1;
+}
+/* a wrapper around all the actual page content
+this will be centered on the page*/
+#wrapper {
+    margin: 0.5em auto;
+    padding:0;
+    position: relative;
+    max-width: 900px;
+    width:calc(100% - 1em);
+    
+    background: rgba(255,255,255,0.6);
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
+    
+    overflow:hidden;
+}
+/*--------------------------------------------------------------
+# General Elements
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Modal Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Header Area
+--------------------------------------------------------------*/
+/*main header div*/
+#header {
+    display: inline-block;
+    margin: 0;
+    padding:1em 1em 0 1em;
+    position: relative;
+    width: 100%;
+}
+
+/* header title*/
+#header .main-title {
+    display: inline-block;
+    float: none;
+    margin: 1em 0 0 0;
+    width:100%;
+    
+    text-align:center;
+}
+/*main link in the header*/
+#header .main-logo {
+    display: block;
+    margin:0 auto;
+    max-width:250px;
+    width:25%;
+    
+    line-height:0;
+}
+/* header content*/
+#header .main-content {
+    display: block;
+    margin: 1em auto 0 auto;
+    width: 11em;
+}
+/*--------------------------------------------------------------
+# Content Area
+--------------------------------------------------------------*/
+/*main content area, contains the "main" and "navbar"*/
+#content {
+    display:inline-block;
+    margin: 0 auto;
+    position: relative;
+    width: 100%
+}
+/*the navigation bar / sidebar wrapper*/
+#sidebar {
+    display:inline-block;
+    padding:0 1em;
+    position:relative;
+    width:100%;
+    
+    text-align:center;
+    
+    z-index:9999;
+}
+#sidebar ul {
+    display:inline-block;
+    margin: 0;
+    max-width:500px;
+    min-width:300px;
+    padding: 0;
+    width:100%;
+    
+    list-style: none inside none;
+}
+#sidebar ul li {
+    width:33%;
+    float:left;
+}
+/* main area actually contains the page content*/
+#main {
+    margin:0;
+    min-height:500px;
+    padding:0 1em;
+    position: relative;
+    width:100%; 
+    
+    text-align:center;
+    
+    z-index:99;
+}
+/* inside the 'main' area, this is an individual article*/
+.article {
+    
+}
+.color-special {
+    color: #aa0000;
+}
+/*--------------------------------------------------------------
+# Footer Area
+--------------------------------------------------------------*/
+/*the footer of the page*/
+#footer {
+    margin:0;
+    min-height:100px;
+    padding:10px;
+    position:relative;
+    width:100%;
+    
+    text-align: center;
+}
+/*--------------------------------------------------------------
+# Reusable Classes
+--------------------------------------------------------------*/
+
+hr.styled-separator {
+    height: 0.1rem;
+    margin:2em;
+    position: relative;
+    
+    color: #6d6d6d;
+    font-size:1rem;
+
+    background: linear-gradient(to left, currentColor calc(50% - 16px), transparent calc(50% - 16px), transparent calc(50% + 16px), currentColor calc(50% + 16px));
+    background-color: transparent !important;
+    border: none;
+
+    opacity:0.5;
+    overflow: visible;
+}
+hr.styled-separator::before,
+hr.styled-separator::after {
+    background: currentColor;
+    content: "";
+    display: block;
+    height: 1.2rem;
+    position: absolute;
+    top: calc(50% - 0.6rem);
+    transform: rotate(22.5deg);
+    width: 0.1rem;
+}
+hr.styled-separator::before {
+    left: calc(50% - 0.3rem);
+}
+hr.styled-separator::after {
+    right: calc(50% - 0.3rem);
+}
+/*--------------------------------------------------------------
+# Other
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Templates
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+
+/* for-phone-only */
+@media only screen and (max-width: 599px) {
+    /* default size */
+}
+
+/* for-tablet-portrait-up */
+@media only screen and (min-width: 600px) {
+    #header .main-title {
+        margin-top:0.5em;
+    }
+}
+
+/* for-tablet-portrait-only */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+    #header .main-logo {
+        float:left;
+        margin:1em 0 0 15%;
+    }
+    #header .main-content {
+        float:right;
+        margin:3em 15% 0 0;
+    }
+}
+
+/* for-tablet-landscape-up */
+@media only screen and (min-width: 900px) {
+    #header .main-title {
+        float:right;
+        margin:1em 1em 0 0;
+        max-width:30rem;
+        width:auto;
+
+        text-align:right;
+    }
+    #header .main-logo {
+        float:left;
+        margin:1em 0 0 2em;
+    }
+    #header .main-content {
+        float:right;
+        margin:1em 15% 0 0;
+    }
+    
+}
+
+/* for-tablet-landscape-only */
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+    
+    #header .main-content {
+        float:right;
+        margin-top:2.5em;
+    }
+}
+
+/* for-desktop-up */
+@media only screen and (min-width: 1200px) {
+    #sidebar {
+        bottom:2em;
+        position:absolute;
+        right:0px;
+        padding:1em 0;
+        top:3em;
+        width:20rem;
+
+        border-left:1px solid #999999;
+    }
+
+    #sidebar ul li {
+        width:100%;
+        float:left;
+    }
+    #main {
+        margin-right:20rem;
+        width:calc(100% - 20rem);
+    }
+    #main .styled-separator:nth-of-type(1) {
+        display:none;
+    }
+}
+
+/* for-desktop-only */
+@media only screen and (min-width: 1200px) and (max-width: 1799px) {
+    /* omitted from assignment */
+}
+
+/* for-big-desktop-up */
+@media only screen and (min-width: 1800px) {
+    #header .main-title {
+        margin-top: 0.5em;
+
+        font-size: 3em;
+        text-align:center;
+    }
+    #header .main-content {
+        margin-right: 20%;
+    }
+    
+}
+
+
+
+</style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1 class="main-title color-special">Joseph P. Neathawk Productions</h1>
+            <a class="main-logo" href="https://knighthawk0811.github.io/CIS1300/"><img src="https://knighthawk0811.github.io/CIS1300/resume03/image/logo200.png" alt="JPNP-Online" title="JPNP-Online" style="width:100%;height:auto;max-width:200px;" alt=""/></a>
+			<p class="main-content">777-555-1023<br />
+				1234 Some street<br />
+				East Cupcake, IL 60123
+			</p>
+        </div>
+        <div id="content">
+            <hr class="styled-separator">
+            <div id="sidebar">
+				<h2 class="color-special">Skills</h2>
+                <ul>
+                    <li>Skill 1</li>
+                    <li>Skill 2</li>
+                    <li>Skill 3</li>
+                    <li>Skill 4</li>
+                    <li>Skill 5</li>
+                    <li>Skill 6</li>
+                    <li>Skill 7</li>
+                    <li>Skill 8</li>
+                </ul>
+            </div>
+            <div id="main">
+                <hr class="styled-separator">
+                <h2 class="color-special">Experience</h2>
+                <div class="article">
+					<h3 class="color-special">Job 01</h3>
+					<p>from date to date</p>
+					<p>I worked on stuff and things</p>
+                </div>
+                <div class="article">
+					<h3 class="color-special">Job 02</h3>
+					<p>from date to date</p>
+					<p>I worked on stuff and things</p>
+                </div>
+                <div class="article">
+					<h3 class="color-special">Job 03</h3>
+					<p>from date to date</p>
+					<p>I worked on stuff and things</p>
+                </div>
+                <hr class="styled-separator">
+                <h2 class="color-special">Education</h2>
+                <div class="article">
+					<h3 class="color-special">School 01</h3>
+					<p>grad date / GPA</p>
+					<p>I learned stuff and things</p>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+                <hr class="styled-separator">
+        <p>Updated: April 2020</p>
+        </div>
+    </div>
+</body>
+</html>
